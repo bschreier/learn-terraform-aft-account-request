@@ -2,11 +2,11 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "a4l-course+sandbox@protonmail.com"
-    AccountName               = "sandbox-aft"
+    AccountEmail              = "a4l-course+whatever@protonmail.com"
+    AccountName               = "whatever-aft"
     ManagedOrganizationalUnit = "AFT"
-    SSOUserEmail              = "a4l-course+sandbox@protonmail.com"
-    SSOUserFirstName          = "Sandbox"
+    SSOUserEmail              = "a4l-course+whatever@protonmail.com"
+    SSOUserFirstName          = "Whatever"
     SSOUserLastName           = "AFT"
   }
 
@@ -25,3 +25,4 @@ module "sandbox" {
 
   account_customizations_name = "sandbox"
 }
+
