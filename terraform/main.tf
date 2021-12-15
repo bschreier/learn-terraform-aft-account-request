@@ -1,28 +1,27 @@
-module "sandbox" {
+module "request-demo" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "a4l-course+whatever@protonmail.com"
-    AccountName               = "whatever-aft"
+    AccountEmail              = "bschreier+request-demo@bandwidth.com"
+    AccountName               = "request-demo"
     ManagedOrganizationalUnit = "AFT"
-    SSOUserEmail              = "a4l-course+whatever@protonmail.com"
-    SSOUserFirstName          = "Whatever"
-    SSOUserLastName           = "AFT"
+    SSOUserEmail              = "bschreier+request-demo@bandwidth.com"
+    SSOUserFirstName          = "request"
+    SSOUserLastName           = "demo"
   }
 
   account_tags = {
-    "Learn Tutorial" = "AFT"
+    "Demo" = "AFT-account-vending"
   }
 
   change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+    change_requested_by = "Brian Schreier"
+    change_reason       = "Demo account vending via aft"
   }
 
   custom_fields = {
-    group = "non-prod"
+    group = "demo"
   }
 
   account_customizations_name = "sandbox"
 }
-
